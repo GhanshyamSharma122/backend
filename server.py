@@ -151,7 +151,9 @@ def get_product(product_id):
     }
 
     return jsonify(product_data), 200
-
+@app.route('/')
+def home():
+    return "Hello, Flask on Vercel!"
 
 @app.route('/product/<int:product_id>', methods=['DELETE'])
 @jwt_required()
