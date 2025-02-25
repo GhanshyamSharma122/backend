@@ -74,7 +74,9 @@ def login():
         return jsonify({'token': access_token, 'user_id': user.id}), 200
 
     return jsonify({'message': 'Invalid email or password'}), 401
-
+@app.route('/', methods=['POST'])
+def defaul():
+    return 'hello man'
 
 # =======================
 # PRODUCT MANAGEMENT ROUTES
